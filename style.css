@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #f4f4f2; }
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+.invitation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero {
+  position: relative;
+  width: min(100%, 700px);
+  line-height: 0;
+  overflow: hidden;
+}
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.music-button {
+  position: absolute;
+  top: 4.2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(64px, 13vw, 90px);
+  height: clamp(64px, 13vw, 90px);
+  border-radius: 50%;
+  border: 7px solid #80b9ef;
+  background: #6e9ed1;
+  color: #315c88;
+  font-size: clamp(25px, 5vw, 38px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  line-height: 1;
+}
+.music-button:active { transform: translateX(-50%) scale(.96); }
+
+@media (min-width: 701px) {
+  .hero { box-shadow: 0 0 30px rgba(0,0,0,.12); }
+}
